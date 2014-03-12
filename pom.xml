@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.origamicode</groupId>
-  <artifactId>db</artifactId>
+  <artifactId>subdb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <description>My wonderfull scala app</description>
   <inceptionYear>2014</inceptionYear>
   <licenses>
     <license>
-      <name>My License</name>
+      <name>Apache License</name>
       <url>http://....</url>
       <distribution>repo</distribution>
     </license>
@@ -24,6 +24,7 @@
     <scala.tools.version>2.10</scala.tools.version>
     <scala.version>2.10.3</scala.version>
     <scalatest.version>2.1.0</scalatest.version>    
+    <scalamock.version>3.0</scalamock.version>    
     
     <scala-maven-plugin.version>3.1.6</scala-maven-plugin.version>
     <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
@@ -47,6 +48,12 @@
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.tools.version}</artifactId>
       <version>${scalatest.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalamock</groupId>
+      <artifactId>scalamock-core_${scala.tools.version}</artifactId>
+      <version>${scalamock.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
